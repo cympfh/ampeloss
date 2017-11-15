@@ -1,0 +1,6 @@
+[submodule "favrm"]
+	path = favrm
+	url = https://github.com/cympfh/favrm
+[submodule "twitter-shellbot"]
+	path = twitter-shellbot
+	url = git@github.com:cympfh/twitter-shellbot.git
