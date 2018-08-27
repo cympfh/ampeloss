@@ -4,3 +4,6 @@
 [submodule "twitter-shellbot"]
 	path = twitter-shellbot
 	url = git@github.com:cympfh/twitter-shellbot.git
+[submodule "anime-notify"]
+	path = anime-notify
+	url = git@github.com:cympfh/ampeloss-anime-notify.git
