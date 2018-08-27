@@ -37,10 +37,12 @@ animetry() {
     a, b, *c = $_.split(" ")
     $_ = "#{Time.parse(a + " "  + b).to_i} #{c.join " "}\n"' |
     while read line; do
-        d=$(( $(echo $line | sed 's/ .*//g') - 300 ))
-        b=$(echo $line | sed 's/^[^ ]* //g')
-        echo "$d $b"
-        atq $d echo && report "$b" || skip "$b"
+        anime_title=$(echo $line | sed 's/^[^ ]* //g')
+        echo "Scheduled: $anime_title"
+        time_before_5min=$(( $(echo $line | sed 's/ .*//g') - 300 ))
+        atq $time_before_5min echo && report "$anime_title 5分前" || skip "$anime_title"
+        time_before_1min=$(( $(echo $line | sed 's/ .*//g') - 60 ))
+        atq $time_before_1min echo && report "$anime_title 1分前" || skip "$anime_title"
         if [ $? -eq 0 ]; then
             break
         fi
