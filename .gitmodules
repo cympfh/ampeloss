@@ -7,3 +7,9 @@
 [submodule "anime-notify"]
 	path = anime-notify
 	url = git@github.com:cympfh/ampeloss-anime-notify.git
+[submodule "mastodon-broadcast"]
+	path = mastodon-broadcast
+	url = git@github.com:cympfh/mastodon-broadcast.git
+[submodule "shellbot"]
+	path = shellbot
+	url = git@github.com:cympfh/shellbot.git
